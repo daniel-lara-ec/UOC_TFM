@@ -1,0 +1,13 @@
+pandas
+sqlalchemy
+pyodbc
+pyarrow
+python-dotenv
+numpy
+pmdarima
+prophet
+boto3
+seaborn
+torch
+chronos-forecasting
+matplotlib
