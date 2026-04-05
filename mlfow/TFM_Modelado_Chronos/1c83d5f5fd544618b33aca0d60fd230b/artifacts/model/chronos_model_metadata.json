@@ -1,0 +1,5 @@
+{
+  "model_id": "amazon/chronos-bolt-small",
+  "logged_model_attr": "model",
+  "type": "ChronosBoltModelForForecasting"
+}

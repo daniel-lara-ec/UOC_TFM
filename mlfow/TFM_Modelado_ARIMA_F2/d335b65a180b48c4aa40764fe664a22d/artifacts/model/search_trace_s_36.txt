@@ -1,0 +1,30 @@
+Performing stepwise search to minimize aic
+ ARIMA(0,0,0)(1,0,1)[36] intercept   : AIC=52540.402, Time=42.51 sec
+ ARIMA(0,0,0)(0,0,0)[36] intercept   : AIC=52720.839, Time=0.13 sec
+ ARIMA(1,0,0)(1,0,0)[36] intercept   : AIC=44402.030, Time=116.06 sec
+ ARIMA(0,0,1)(0,0,1)[36] intercept   : AIC=48716.771, Time=59.05 sec
+ ARIMA(0,0,0)(0,0,0)[36]             : AIC=54832.925, Time=0.06 sec
+ ARIMA(1,0,0)(0,0,0)[36] intercept   : AIC=44429.369, Time=0.27 sec
+ ARIMA(1,0,0)(2,0,0)[36] intercept   : AIC=44399.876, Time=198.48 sec
+ ARIMA(1,0,0)(2,0,1)[36] intercept   : AIC=inf, Time=143.26 sec
+ ARIMA(1,0,0)(1,0,1)[36] intercept   : AIC=inf, Time=35.94 sec
+ ARIMA(0,0,0)(2,0,0)[36] intercept   : AIC=52530.650, Time=81.85 sec
+ ARIMA(2,0,0)(2,0,0)[36] intercept   : AIC=44289.704, Time=1492.34 sec
+ ARIMA(2,0,0)(1,0,0)[36] intercept   : AIC=44294.057, Time=157.94 sec
+ ARIMA(2,0,0)(2,0,1)[36] intercept   : AIC=inf, Time=1619.62 sec
+ ARIMA(2,0,0)(1,0,1)[36] intercept   : AIC=inf, Time=80.03 sec
+ ARIMA(3,0,0)(2,0,0)[36] intercept   : AIC=44282.126, Time=606.43 sec
+ ARIMA(3,0,0)(1,0,0)[36] intercept   : AIC=44286.546, Time=28.76 sec
+ ARIMA(3,0,0)(2,0,1)[36] intercept   : AIC=inf, Time=236.76 sec
+ ARIMA(3,0,0)(1,0,1)[36] intercept   : AIC=inf, Time=43.70 sec
+ ARIMA(3,0,1)(2,0,0)[36] intercept   : AIC=44280.658, Time=581.65 sec
+ ARIMA(3,0,1)(1,0,0)[36] intercept   : AIC=44285.308, Time=42.57 sec
+ ARIMA(3,0,1)(2,0,1)[36] intercept   : AIC=inf, Time=220.88 sec
+ ARIMA(3,0,1)(1,0,1)[36] intercept   : AIC=inf, Time=41.81 sec
+ ARIMA(2,0,1)(2,0,0)[36] intercept   : AIC=44283.904, Time=374.69 sec
+ ARIMA(3,0,2)(2,0,0)[36] intercept   : AIC=44285.527, Time=509.07 sec
+ ARIMA(2,0,2)(2,0,0)[36] intercept   : AIC=44285.539, Time=339.18 sec
+ ARIMA(3,0,1)(2,0,0)[36]             : AIC=44315.608, Time=30.89 sec
+
+Best model:  ARIMA(3,0,1)(2,0,0)[36] intercept
+Total fit time: 7084.062 seconds

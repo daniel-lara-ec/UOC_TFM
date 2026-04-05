@@ -1,0 +1,18 @@
+{
+  "experiment_name": "TFM_Modelado_ARIMA_F1",
+  "data_source": "data/conjuntos/datos_entrenamiento.csv",
+  "phase_filtered": 1,
+  "total_observations": 3895,
+  "train_size": 3889,
+  "test_size": 6,
+  "future_forecast_steps": 6,
+  "seasonal_periods_tested": [
+    6,
+    36
+  ],
+  "num_models_trained": 2,
+  "auto_arima_max_p": 3,
+  "auto_arima_max_q": 3,
+  "auto_arima_max_P": 2,
+  "auto_arima_max_Q": 2
+}
