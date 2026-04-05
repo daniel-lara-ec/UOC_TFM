@@ -1,0 +1,106 @@
+# TFM - Monitoreo y modelado de consumo electrico
+
+Repositorio del trabajo de fin de master orientado a:
+
+- Captura de mediciones electricas desde dispositivo embebido.
+- Ingestion y procesamiento de datos en AWS.
+- Analisis y modelado de series temporales (ARIMA, Prophet, Chronos, LSTM).
+- Registro de artefactos y resultados de experimentos.
+
+## Estructura del repositorio
+
+```text
+.
+|-- LICENCE
+|-- README
+|-- Arquitectura/
+|   |-- AWS/
+|   |   |-- cleanup_rds_lambda.py
+|   |   |-- glue_elt_zc_energia_clientes_extremos.py
+|   |   |-- glue_elt_zc_energia_clientes_horaria.py
+|   |   |-- glue_etl_migracion_zc_energia_clientes_mediciones.py
+|   |   |-- glue_etl_zc_energia_clientes_mediciones.py
+|   |   |-- lambda_agg_rds_modelo.py
+|   |   |-- lambda_function.py
+|   |   |-- lambda_rds_ingest.py
+|   |   |-- main.tf
+|   |   |-- outputs.tf
+|   |   |-- requirements-lambda.txt
+|   |   |-- variables.tf
+|   |   |-- versions.tf
+|   |   `-- certs/
+|   |       |-- dispositivo_001.certificate.pem
+|   |       |-- dispositivo_001.private.key
+|   |       `-- dispositivo_001.public.key
+|   `-- Dispositivo/
+|       |-- Codigo/
+|       |   |-- arduino_secrets.h
+|       |   |-- cert.h
+|       |   `-- SensoresElectricos_V2.ino
+|       `-- PCB/
+|           |-- Esquematico_SensorElectrico.pdf
+|           |-- Mascara_SensorElectrico.pdf
+|           `-- PlacaSensoresV2.pdsprj
+|-- Codigo/
+|   |-- requirements.txt
+|   |-- data/
+|   |   `-- conjuntos/
+|   |       |-- datos_entrenamiento.csv
+|   |       `-- datos_prueba.csv
+|   |-- notebooks/
+|   |   |-- 1_Extraccion.ipynb
+|   |   |-- 2_Analisis.ipynb
+|   |   |-- 3_Modelo_ARIMA.ipynb
+|   |   |-- 4_ModeloProphet.ipynb
+|   |   |-- 5_ModeloChronos.ipynb
+|   |   `-- 6_ModeloLSTM.ipynb
+|   `-- scripts/
+|       |-- 1_autoarima_f1.py
+|       `-- 2_autoarima_f2.py
+`-- mlfow/
+    `-- TFM_Modelado_ARIMA_F1/
+        |-- autoarima_s_144/
+        |   `-- artifacts/
+        |       |-- datasets/
+        |       |   |-- datos_entrenamiento.csv
+        |       |   |-- serie_fase1_completa.csv
+        |       |   |-- serie_test.csv
+        |       |   `-- serie_train.csv
+        |       `-- plots/
+        |           `-- serie_original.png
+        |-- autoarima_s_24/
+        |   `-- artifacts/
+        |       |-- model/
+        |       |   `-- summary_s_24.txt
+        |       |-- plots/
+        |       |   `-- forecast_s_24.png
+        |       `-- predicciones/
+        |           `-- predicciones_s_24.csv
+        `-- autoarima_s_6/
+            `-- artifacts/
+                |-- model/
+                |   `-- summary_s_6.txt
+                |-- plots/
+                |   `-- forecast_s_6.png
+                `-- predicciones/
+                    `-- predicciones_s_6.csv
+```
+
+## Descripcion breve por modulo
+
+- Arquitectura/AWS: Infraestructura y procesos de nube para ingestion, ETL/ELT y orquestacion de datos/modelos (Terraform, Lambda y Glue).
+- Arquitectura/AWS/certs: Material criptografico del dispositivo IoT para autenticacion/seguridad.
+- Arquitectura/Dispositivo/Codigo: Firmware del microcontrolador para lectura y envio de datos de sensores electricos.
+- Arquitectura/Dispositivo/PCB: Diseno electronico y documentacion de la placa de sensores.
+- Codigo/data: Conjuntos de entrenamiento y prueba usados por notebooks y scripts.
+- Codigo/notebooks: Flujo exploratorio y comparativo de modelos de series temporales.
+- Codigo/scripts: Automatizaciones de entrenamiento y evaluacion (enfocadas en AutoARIMA por fase).
+- mlfow: Artefactos de experimentacion y salidas de modelado (metricas, graficos, resumenes y predicciones).
+
+## Flujo general
+
+1. Captura de mediciones desde el dispositivo.
+2. Ingestion y transformacion en AWS.
+3. Preparacion de datasets para modelado.
+4. Entrenamiento y evaluacion de modelos en notebooks/scripts.
+5. Almacenamiento de artefactos y predicciones para analisis posterior.
