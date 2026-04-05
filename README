@@ -1,11 +1,6 @@
 # TFM - Monitoreo y modelado de consumo electrico
 
-Repositorio del trabajo de fin de master orientado a:
-
-- Captura de mediciones electricas desde dispositivo embebido.
-- Ingestion y procesamiento de datos en AWS.
-- Analisis y modelado de series temporales (ARIMA, Prophet, Chronos, LSTM).
-- Registro de artefactos y resultados de experimentos.
+Repositorio del trabajo de fin de master: Diseño e implementación de un sistema de procesamiento de datos para la captura modelado y predicción del consumo eléctrico en tiempo real
 
 ## Estructura del repositorio
 
@@ -59,31 +54,6 @@ Repositorio del trabajo de fin de master orientado a:
 |       `-- 2_autoarima_f2.py
 `-- mlfow/
     `-- TFM_Modelado_ARIMA_F1/
-        |-- autoarima_s_144/
-        |   `-- artifacts/
-        |       |-- datasets/
-        |       |   |-- datos_entrenamiento.csv
-        |       |   |-- serie_fase1_completa.csv
-        |       |   |-- serie_test.csv
-        |       |   `-- serie_train.csv
-        |       `-- plots/
-        |           `-- serie_original.png
-        |-- autoarima_s_24/
-        |   `-- artifacts/
-        |       |-- model/
-        |       |   `-- summary_s_24.txt
-        |       |-- plots/
-        |       |   `-- forecast_s_24.png
-        |       `-- predicciones/
-        |           `-- predicciones_s_24.csv
-        `-- autoarima_s_6/
-            `-- artifacts/
-                |-- model/
-                |   `-- summary_s_6.txt
-                |-- plots/
-                |   `-- forecast_s_6.png
-                `-- predicciones/
-                    `-- predicciones_s_6.csv
 ```
 
 ## Descripcion breve por modulo
