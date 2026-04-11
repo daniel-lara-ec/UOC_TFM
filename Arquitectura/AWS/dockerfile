@@ -1,0 +1,27 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Instalar dependencias del sistema necesarias
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    gcc \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copiar requisitos e instalar dependencias Python
+COPY requirements-predicciones.txt .
+RUN pip install --no-cache-dir -r requirements-predicciones.txt
+
+# Copiar script de predicciones
+COPY app-predicciones.py .
+
+# Variables de entorno por defecto (deben ser sobrescritas desde Terraform)
+# Valores obligatorios que deben pasarse en runtime:
+# - RDS_HOST: endpoint de RDS desde outputs de Terraform
+ENV RDS_DB=iotdb
+ENV RDS_USER=iotadmin
+ENV RDS_PORT=5432
+ENV RDS_HOST=""
+
+CMD ["python", "app-predicciones.py"]
