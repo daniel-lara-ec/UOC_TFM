@@ -10,50 +10,25 @@ Repositorio del trabajo de fin de master: Diseño e implementación de un sistem
 |-- README
 |-- Arquitectura/
 |   |-- AWS/
-|   |   |-- cleanup_rds_lambda.py
-|   |   |-- glue_elt_zc_energia_clientes_extremos.py
-|   |   |-- glue_elt_zc_energia_clientes_horaria.py
-|   |   |-- glue_etl_migracion_zc_energia_clientes_mediciones.py
-|   |   |-- glue_etl_zc_energia_clientes_mediciones.py
-|   |   |-- lambda_agg_rds_modelo.py
-|   |   |-- lambda_function.py
-|   |   |-- lambda_rds_ingest.py
-|   |   |-- main.tf
-|   |   |-- outputs.tf
-|   |   |-- requirements-lambda.txt
-|   |   |-- variables.tf
-|   |   |-- versions.tf
+|   |   |-- <Scripts IaC>
 |   |   `-- certs/
-|   |       |-- dispositivo_001.certificate.pem
-|   |       |-- dispositivo_001.private.key
-|   |       `-- dispositivo_001.public.key
+|   |       `-- <Claves para autenticación>
 |   `-- Dispositivo/
 |       |-- Codigo/
-|       |   |-- arduino_secrets.h
-|       |   |-- cert.h
-|       |   `-- SensoresElectricos_V2.ino
+|       |   `-- <Scripts para microcontrolador>
 |       `-- PCB/
-|           |-- Esquematico_SensorElectrico.pdf
-|           |-- Mascara_SensorElectrico.pdf
-|           `-- PlacaSensoresV2.pdsprj
+|           `-- <Información para diseño de la PCB>
 |-- Codigo/
 |   |-- requirements.txt
 |   |-- data/
 |   |   `-- conjuntos/
-|   |       |-- datos_entrenamiento.csv
-|   |       `-- datos_prueba.csv
+|   |       `-- <Datos para entrenamiento>
 |   |-- notebooks/
-|   |   |-- 1_Extraccion.ipynb
-|   |   |-- 2_Analisis.ipynb
-|   |   |-- 3_Modelo_ARIMA.ipynb
-|   |   |-- 4_ModeloProphet.ipynb
-|   |   |-- 5_ModeloChronos.ipynb
-|   |   `-- 6_ModeloLSTM.ipynb
+|   |   `-- <Cuadernos para experimentación de modelos>
 |   `-- scripts/
-|       |-- 1_autoarima_f1.py
-|       `-- 2_autoarima_f2.py
+|       `-- <Scripts para entrenamiento de modelos>
 `-- mlfow/
-    `-- TFM_Modelado_ARIMA_F1/
+    `-- <Artefactos del entrenamiento en Mlflow>
 ```
 
 ## Descripcion breve por modulo
@@ -66,6 +41,13 @@ Repositorio del trabajo de fin de master: Diseño e implementación de un sistem
 - Codigo/notebooks: Flujo exploratorio y comparativo de modelos de series temporales.
 - Codigo/scripts: Automatizaciones de entrenamiento y evaluacion (enfocadas en AutoARIMA por fase).
 - mlfow: Artefactos de experimentacion y salidas de modelado (metricas, graficos, resumenes y predicciones).
+
+## Tableros
+
+En esta sección se encuentran los enlaces a los tableros construidos como parte del proyecto en el aplicativo Grafana:
+
+1. [Tablero de parámetros eléctricos](https://tfm-uoc.matiaslara.com/public-dashboards/49b5be07474c41a68b8e9d6bb1102106)
+2. [Tablero de proyecciones](https://tfm-uoc.matiaslara.com/public-dashboards/cbe3b65494014bbe94f6d87ed4529e8c)
 
 ## Flujo general
 
