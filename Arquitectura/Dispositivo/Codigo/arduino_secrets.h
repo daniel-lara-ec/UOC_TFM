@@ -1,1 +1,0 @@
-#define TOKEN "<TokenSecreto>"
